@@ -1,6 +1,6 @@
 # Radio
 
-This is a short tool to share messages. It is inspired on Redux.
+Messenger tool for typescript. It is inspired on Redux.
 
 ## API
 ### Radio::subscribe
