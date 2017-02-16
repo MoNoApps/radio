@@ -1,2 +1,1 @@
-export { Radio } from './radio';
-
+export { Radio, uuid, Id } from './radio';
