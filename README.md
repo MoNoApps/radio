@@ -26,14 +26,44 @@ git clone https://github.com/monoapps/radio.git $BASE
 
 ### Import
 
+Register Radio provider (DI)
 ``````ts
+import { Component, OnInit } from '@angular/core';
 import { Radio, Id } from '@monoapps/radio';
 
-...
-  const listener = () => [{}];
-  this.radio.subscribe(Id, listener);
-...
-  this.radio.dispatch(Id, ['message']);
- ...
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  providers: [Radio]
+})
+export class AppComponent implements OnInit {
+  title = 'app works!';
 
+  constructor(private radio: Radio) { }
+
+  ngOnInit() {
+    this.radio.subscribe(Id, this.print);
+  }
+
+  print(value) {
+    console.log(value);
+  }
+}
+``````
+
+Import Radio from the registered module
+``````ts
+import { Component, OnInit } from '@angular/core';
+import { Radio, Id } from '@monoapps/radio';
+
+export class SelectComponent implements OnInit {
+
+  constructor(private radio: Radio) { }
+
+  ngOnInit() {
+    this.radio.dispatch(Id, ['message']);
+  }
+  
+}
 ``````
