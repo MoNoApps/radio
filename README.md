@@ -21,7 +21,7 @@ On a project generated with angular-cli
 ``````bash
 BASE=node_modules/@monoapps
 mkdir $BASE
-git clone https://github.com/monoapps/radio.git $BASE
+git clone https://github.com/monoapps/radio.git $BASE/radio
 ``````
 
 ### Import
