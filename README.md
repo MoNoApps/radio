@@ -19,9 +19,7 @@ On a project generated with angular-cli
 ### Install
 
 ``````bash
-BASE=node_modules/@monoapps
-mkdir $BASE
-git clone https://github.com/monoapps/radio.git $BASE/radio
+npm install https://github.com/MoNoApps/radio.git
 ``````
 
 ### Import
